@@ -99,3 +99,14 @@ button:hover {
     color: #333333;
     font-weight: normal;
 }
+
+.live-clock {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 20px;
+}
