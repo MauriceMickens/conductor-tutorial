@@ -44,6 +44,9 @@
                 <p><strong>Workspace Path:</strong> <span id="workspace-path">Loading...</span></p>
             </div>
         </section>
+        <footer class="live-clock">
+            <span id="live-clock">Loading...</span>
+        </footer>
     </div>
     
     <script>
@@ -61,6 +64,13 @@
         
         document.getElementById('workspace-name').textContent = actualWorkspaceName;
         document.getElementById('workspace-path').textContent = window.location.pathname || 'unknown';
+
+        // Live clock
+        function updateClock() {
+            document.getElementById('live-clock').textContent = new Date().toLocaleString();
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
     </script>
 </body>
 </html>
