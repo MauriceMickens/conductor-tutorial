@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +7,10 @@
 }
 
 body {
-    background-color: #ffc0cb;
-    color: #333333;
+    background-color: #0a0a1a;
+    color: #e0e0e0;
     line-height: 1.6;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .container {
@@ -22,15 +25,25 @@ header {
 }
 
 header h1 {
+    font-family: 'Orbitron', monospace;
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 900;
     margin-bottom: 10px;
-    color: #333333;
+    background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: neon-shift 3s linear infinite;
+}
+
+@keyframes neon-shift {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
 }
 
 header p {
     font-size: 18px;
-    color: #666666;
+    color: #888;
 }
 
 .features {
@@ -42,17 +55,50 @@ header p {
 
 .card {
     padding: 20px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #ff00ff55;
+    background: rgba(255, 0, 255, 0.05);
+    box-shadow: 0 0 12px rgba(255, 0, 255, 0.15), inset 0 0 12px rgba(255, 0, 255, 0.05);
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    border-color: #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), inset 0 0 20px rgba(0, 255, 255, 0.05);
 }
 
 .card h2 {
+    font-family: 'Orbitron', monospace;
     font-size: 20px;
     margin-bottom: 10px;
-    color: #333333;
+    color: #00ffff;
 }
 
 .card p {
-    color: #666666;
+    color: #aaa;
+}
+
+.guest-log {
+    margin-bottom: 40px;
+}
+
+.guest-log h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 24px;
+    color: #ff00ff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.guest-log ul {
+    list-style: none;
+    padding: 0;
+}
+
+.guest-log li {
+    padding: 8px 12px;
+    border-left: 2px solid #ff00ff55;
+    margin-bottom: 6px;
+    color: #ccc;
 }
 
 .cta {
@@ -60,18 +106,21 @@ header p {
 }
 
 button {
-    background-color: #000;
+    background: linear-gradient(135deg, #ff00ff, #8800aa);
     color: #fff;
     border: none;
     padding: 12px 30px;
     font-size: 16px;
+    font-family: 'Orbitron', monospace;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: box-shadow 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 button:hover {
-    background-color: #333;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
 }
 
 .guest-log {
@@ -107,26 +156,29 @@ button:hover {
 .debug-info {
     margin-top: 40px;
     padding: 20px;
-    background-color: #f8f8f8;
-    border: 1px solid #e0e0e0;
+    background-color: rgba(0, 255, 255, 0.03);
+    border: 1px solid #00ffff33;
     border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
 }
 
 .debug-info h2 {
+    font-family: 'Orbitron', monospace;
     font-size: 24px;
-    color: #333333;
+    color: #00ffff;
     margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 .debug-content p {
     font-size: 14px;
-    color: #666666;
+    color: #888;
     margin-bottom: 8px;
     font-family: monospace;
 }
 
 .debug-content span {
-    color: #333333;
+    color: #00ffff;
     font-weight: normal;
 }
 
