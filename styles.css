@@ -123,6 +123,36 @@ button:hover {
     box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
 }
 
+.guest-log {
+    margin-bottom: 40px;
+}
+
+.guest-log h2 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.guest-log ul {
+    list-style: none;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.guest-log li {
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+.guest-log li:nth-child(odd) {
+    background-color: #fff0f3;
+}
+
+.guest-log li:nth-child(even) {
+    background-color: #ffe0e6;
+}
+
 .debug-info {
     margin-top: 40px;
     padding: 20px;
@@ -150,4 +180,15 @@ button:hover {
 .debug-content span {
     color: #00ffff;
     font-weight: normal;
+}
+
+.live-clock {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 20px;
 }
